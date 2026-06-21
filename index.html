@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notes — Recordatorios y aulas virtuales para alumnos y maestros</title>
+  <meta name="description" content="Notes: la app de recordatorios con aulas virtuales para alumnos y maestros. Organiza tareas, clases y avisos en un solo lugar. Descárgala para Android." />
+  <meta name="theme-color" content="#0B0B0F" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Notes — Recordatorios y aulas virtuales" />
+  <meta property="og:description" content="Recordatorios, tareas y aulas virtuales para alumnos y maestros. Descárgala para Android." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23D97706'/%3E%3Cpath d='M9 8h11l3 3v13a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z' fill='%230B0B0F'/%3E%3Cpath d='M11 14h8M11 18h8M11 22h5' stroke='%23D97706' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <!-- Ambient animated light blobs -->
+  <div class="ambient" aria-hidden="true">
+    <span class="blob blob--amber"></span>
+    <span class="blob blob--indigo"></span>
+    <span class="blob blob--violet"></span>
+  </div>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top" aria-label="Notes inicio">
+      <svg class="nav__logo" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#D97706"/>
+        <path d="M9 8h11l3 3v13a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" fill="#0B0B0F"/>
+        <path d="M11 14h8M11 18h8M11 22h5" stroke="#D97706" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span>Notes</span>
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#features">Funciones</a>
+      <a href="#aulas">Aulas</a>
+      <a href="#descargar">Descargar</a>
+    </nav>
+    <a class="btn btn--ghost nav__cta" href="#descargar">Obtener app</a>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__copy reveal">
+        <span class="pill">
+          <span class="pill__dot"></span>
+          Para alumnos y maestros
+        </span>
+        <h1 class="hero__title">
+          Recordatorios y <span class="grad">aulas virtuales</span> en una sola app.
+        </h1>
+        <p class="hero__sub">
+          Notes mantiene a tu clase sincronizada: tareas, avisos, fechas de entrega
+          y aulas virtuales para que ningún alumno se quede atrás.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#descargar" id="heroDownload">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M12 3v10m0 0 4-4m-4 4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <path d="M5 17v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+            Descargar para Android
+          </a>
+          <a class="btn btn--glass btn--lg" href="#features">Ver funciones</a>
+        </div>
+
+        <div class="hero__meta">
+          <div class="stars" aria-label="Calificación 4.8 de 5">
+            <svg viewBox="0 0 20 20" width="18" height="18"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z" fill="#D97706"/></svg>
+            <svg viewBox="0 0 20 20" width="18" height="18"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z" fill="#D97706"/></svg>
+            <svg viewBox="0 0 20 20" width="18" height="18"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z" fill="#D97706"/></svg>
+            <svg viewBox="0 0 20 20" width="18" height="18"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z" fill="#D97706"/></svg>
+            <svg viewBox="0 0 20 20" width="18" height="18"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z" fill="#D97706"/></svg>
+          </div>
+          <span class="hero__meta-text">4.8 · Hecho para el aula · APK Android</span>
+        </div>
+      </div>
+
+      <!-- Device mockup -->
+      <div class="hero__device reveal" style="--d:120ms">
+        <div class="phone" id="phone">
+          <div class="phone__glow" aria-hidden="true"></div>
+          <div class="phone__notch" aria-hidden="true"></div>
+          <div class="phone__screen">
+            <div class="app">
+              <div class="app__top">
+                <div>
+                  <p class="app__hi">Buenos días, Prof. Ramírez</p>
+                  <p class="app__date">Hoy · 3 recordatorios</p>
+                </div>
+                <span class="app__avatar">R</span>
+              </div>
+
+              <div class="app__card app__card--accent">
+                <span class="app__badge">Aula virtual</span>
+                <p class="app__card-title">Matemáticas 3°B</p>
+                <p class="app__card-sub">En vivo · 09:00 — 24 alumnos</p>
+              </div>
+
+              <p class="app__section">Recordatorios</p>
+              <ul class="app__list">
+                <li class="app__item"><span class="dot dot--amber"></span><div><b>Entregar ensayo</b><small>Hoy · 14:00</small></div></li>
+                <li class="app__item"><span class="dot dot--indigo"></span><div><b>Examen de Historia</b><small>Mañana · 10:30</small></div></li>
+                <li class="app__item"><span class="dot dot--green"></span><div><b>Reunión de padres</b><small>Vie · 17:00</small></div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="strip reveal" aria-label="Resumen">
+      <div class="strip__item"><b>1 app</b><span>tareas, avisos y aulas</span></div>
+      <div class="strip__item"><b>Alumnos + maestros</b><span>un mismo espacio</span></div>
+      <div class="strip__item"><b>Sin distracciones</b><span>solo lo del aula</span></div>
+      <div class="strip__item"><b>Android</b><span>instalación directa</span></div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+      <div class="section-head reveal">
+        <span class="pill pill--soft">Funciones</span>
+        <h2>Todo lo que el aula necesita, ordenado.</h2>
+        <p>Pensada para la vida real de alumnos y maestros: recordatorios que sí llegan y aulas virtuales sin complicaciones.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card reveal">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+          </span>
+          <h3>Recordatorios inteligentes</h3>
+          <p>Programa tareas, exámenes y entregas. Notes avisa a tiempo para que nadie lo olvide.</p>
+        </article>
+
+        <article class="card reveal" style="--d:80ms">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" width="24" height="24"><rect x="3" y="5" width="18" height="13" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M3 9h18M8 14h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Aulas virtuales</h3>
+          <p>Crea un aula, invita a tus alumnos y comparte clases, materiales y avisos en segundos.</p>
+        </article>
+
+        <article class="card reveal" style="--d:160ms">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M16 19a4 4 0 0 0-8 0M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 19a3 3 0 0 1 4-2.8M20 19a3 3 0 0 0-4-2.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+          </span>
+          <h3>Alumnos y maestros</h3>
+          <p>Cada quien ve lo suyo: el maestro publica, el alumno recibe. Roles claros desde el inicio.</p>
+        </article>
+
+        <article class="card reveal" style="--d:40ms">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </span>
+          <h3>Listas de tareas</h3>
+          <p>Marca pendientes, organiza por materia y mira tu avance del día sin perderte.</p>
+        </article>
+
+        <article class="card reveal" style="--d:120ms">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 3l8 4v5c0 4.4-3.1 7.6-8 9-4.9-1.4-8-4.6-8-9V7l8-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/></svg>
+          </span>
+          <h3>Solo lo del aula</h3>
+          <p>Un espacio enfocado, sin redes ni ruido. La información del curso siempre a la mano.</p>
+        </article>
+
+        <article class="card reveal" style="--d:200ms">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Avisos al instante</h3>
+          <p>Publica un aviso y todos en el aula lo reciben. Comunicación directa, sin grupos perdidos.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- AULAS feature highlight -->
+    <section class="showcase" id="aulas">
+      <div class="showcase__text reveal">
+        <span class="pill pill--soft">Aulas virtuales</span>
+        <h2>Un aula que se arma sola.</h2>
+        <p>Abre tu aula, comparte el código y tus alumnos entran al instante. Publica recordatorios y materiales; ellos los reciben ordenados por fecha y materia.</p>
+        <ul class="checks">
+          <li><span class="check"></span>Invita por código de aula</li>
+          <li><span class="check"></span>Recordatorios sincronizados para todos</li>
+          <li><span class="check"></span>Materiales y avisos en un solo hilo</li>
+        </ul>
+        <a class="btn btn--primary" href="#descargar">Crear mi aula</a>
+      </div>
+
+      <div class="showcase__visual reveal" style="--d:120ms">
+        <div class="mini-board glass">
+          <div class="mini-board__row">
+            <span class="mini-board__tag">Aula</span>
+            <b>Física 5°A</b>
+            <span class="mini-board__code">#A7K2</span>
+          </div>
+          <div class="mini-board__bar"><i style="width:78%"></i></div>
+          <p class="mini-board__hint">18 de 23 alumnos al día</p>
+          <div class="mini-board__chips">
+            <span>Tarea</span><span>Examen</span><span>Aviso</span><span>Material</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD CTA -->
+    <section class="download" id="descargar">
+      <div class="download__inner glass reveal">
+        <h2>Lleva tu aula contigo.</h2>
+        <p>Descarga Notes para Android e instala el APK. Recordatorios y aulas virtuales, listos en minutos.</p>
+
+        <a class="btn btn--primary btn--xl" href="./notes.apk" download="notes.apk" id="downloadBtn">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path d="M12 3v10m0 0 4-4m-4 4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M5 17v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+          Descargar APK
+        </a>
+        <p class="download__note">Android 7.0+ · ~8.5 MB · Activa "instalar desde esta fuente" en tu teléfono.</p>
+
+        <details class="howto">
+          <summary>¿Cómo instalo el APK?</summary>
+          <ol>
+            <li>Toca <b>Descargar APK</b> desde tu teléfono Android.</li>
+            <li>Abre el archivo descargado.</li>
+            <li>Si te lo pide, permite <b>instalar desde esta fuente</b>.</li>
+            <li>Abre Notes y crea tu aula o únete con un código.</li>
+          </ol>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#D97706"/>
+        <path d="M9 8h11l3 3v13a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" fill="#0B0B0F"/>
+        <path d="M11 14h8M11 18h8M11 22h5" stroke="#D97706" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span>Notes</span>
+    </div>
+    <p>Recordatorios y aulas virtuales para alumnos y maestros.</p>
+    <p class="footer__copy">© <span id="year"></span> Notes</p>
+  </footer>
+
+  <script src="./assets/script.js"></script>
+</body>
+</html>
